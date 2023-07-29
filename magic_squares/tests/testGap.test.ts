@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { testGap } from "../isMagicSquare";
+import { testGap } from "..";
 
 describe("testGap", () => {
   it("Returns true for a valid square", () => {

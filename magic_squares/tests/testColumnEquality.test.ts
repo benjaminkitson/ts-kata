@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { testColumnEquality } from "../isMagicSquare";
+import { testColumnEquality } from "..";
 
 describe("testColumnEquality", () => {
   it("Returns true when the sums of the columns are equal", () => {

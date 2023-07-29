@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { testRowEquality } from "../isMagicSquare";
+import { testRowEquality } from "..";
 
 describe("testRowEquality", () => {
   it("Returns true when the sums of the rows are equal", () => {

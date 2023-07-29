@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { isMagicSquare } from "../isMagicSquare";
+import { isMagicSquare } from "..";
 
 describe("Basic tests", function () {
   it("Valid 3x3 magic square", function () {
