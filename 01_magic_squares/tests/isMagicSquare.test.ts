@@ -1,9 +1,11 @@
 import { assert } from "chai";
 import { isMagicSquare } from "..";
 
+// ! Tests from the kata page itself
+
 describe("Basic tests", function () {
   it("Valid 3x3 magic square", function () {
-    assert.strictEqual(
+    expect(
       isMagicSquare(
         [
           [8, 1, 6],
@@ -11,14 +13,12 @@ describe("Basic tests", function () {
           [4, 9, 2],
         ],
         1
-      ),
-      true,
-      "Should be valid"
-    );
+      )
+    ).toBe(true);
   });
 
   it("Improper sums of row/col values", function () {
-    assert.strictEqual(
+    expect(
       isMagicSquare(
         [
           [4, 1, 6],
@@ -26,14 +26,12 @@ describe("Basic tests", function () {
           [8, 9, 2],
         ],
         1
-      ),
-      false,
-      "Improper sums of row/col values"
-    );
+      )
+    ).toBe(false);
   });
 
   it("Progression (sequence) and gap validation", function () {
-    assert.strictEqual(
+    expect(
       isMagicSquare(
         [
           [9, 2, 7],
@@ -41,12 +39,10 @@ describe("Basic tests", function () {
           [5, 10, 3],
         ],
         1
-      ),
-      true,
-      "Should be valid with sequence starting at 2 and gap = 1"
-    );
+      )
+    ).toBe(true);
 
-    assert.strictEqual(
+    expect(
       isMagicSquare(
         [
           [22, 1, 16],
@@ -54,14 +50,12 @@ describe("Basic tests", function () {
           [10, 25, 4],
         ],
         3
-      ),
-      true,
-      "Should be valid with sequence starting at 1 and gap = 3"
-    );
+      )
+    ).toBe(true);
   });
 
   it("Improper sums of row/col/diagonals values, invalid progression", function () {
-    assert.strictEqual(
+    expect(
       isMagicSquare(
         [
           [1, 2, 3],
@@ -69,25 +63,20 @@ describe("Basic tests", function () {
           [7, 8, 9],
         ],
         1
-      ),
-      false,
-      "Improper sums of row/col/diagonals values, valid progression"
-    );
+      )
+    ).toBe(false);
 
-    // ! A test provided in the Kata that TS addresses before runtime
-    // assert.strictEqual(
-    //   isMagicSquare(
-    //     [
-    //       [1, 2, 3, 4],
-    //       [9, 10, 11, 12],
-    //       [13, 14, 15, 16],
-    //       [5, 6, 7, 8],
-    //     ],
-    //     1
-    //   ),
-    //   false,
-    //   "Improper sums of row/col/diagonals values, valid progression"
-    // );
+    expect(
+      isMagicSquare(
+        [
+          [1, 2, 3, 4],
+          [9, 10, 11, 12],
+          [13, 14, 15, 16],
+          [5, 6, 7, 8],
+        ],
+        1
+      )
+    ).toBe(false);
 
     assert.strictEqual(
       isMagicSquare(

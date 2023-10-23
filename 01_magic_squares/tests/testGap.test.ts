@@ -3,7 +3,7 @@ import { testGap } from "..";
 
 describe("testGap", () => {
   it("Returns true for a valid square", () => {
-    assert.strictEqual(
+    expect(
       testGap(
         [
           [8, 1, 6],
@@ -11,13 +11,12 @@ describe("testGap", () => {
           [4, 9, 2],
         ],
         1
-      ),
-      true
-    );
+      )
+    ).toBe(true);
   });
 
   it("Returns false for an invalid square", () => {
-    assert.strictEqual(
+    expect(
       testGap(
         [
           [2, 1, 6],
@@ -25,8 +24,7 @@ describe("testGap", () => {
           [4, 9, 2],
         ],
         1
-      ),
-      false
-    );
+      )
+    ).toBe(false);
   });
 });

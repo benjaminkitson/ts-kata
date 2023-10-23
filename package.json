@@ -12,6 +12,6 @@
   },
   "scripts": {
     "test": "jest",
-    "ts": "ts-node $P"
+    "ts": "ts-node"
   }
 }

@@ -33,5 +33,3 @@ export const googleSheets = (range: string) => {
 
   return result;
 };
-
-console.log(googleSheets("A1:C16"));
